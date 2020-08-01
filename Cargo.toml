@@ -1,0 +1,21 @@
+[package]
+name = "telegrapher_common"
+version = "0.1.0"
+authors = ["Marcel Müller <neikos@neikos.email>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies.serde]
+version  = "1.0.114"
+default-features = false
+features = ["alloc", "derive"]
+
+[dependencies.telegram-bot-raw]
+git = "https://github.com/TheNeikos/telegram-bot.git"
+rev = "feature/allow_types_no_std" 
+default-features = false
+features = ["no_std", "request_building"]
+
+[dev-dependencies]
+serde_json = "1.0.56"
